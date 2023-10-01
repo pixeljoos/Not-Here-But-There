@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Here But There Bookmarklet</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-4">
+
+    <p>Drag the link below to your bookmarks bar:</p>
+    <a class="btn btn-primary" href="javascript:(function(){
+      let intervalId;
+      let startTime;
+      let timerIntervalId;
+      
+      function showElapsedTime() {
+          const now = new Date().getTime();
+          const elapsed = now - startTime;
+          const minutes = Math.floor(elapsed / 60000);
+          const seconds = ((elapsed % 60000) / 1000).toFixed(0);
+          alert(`Running for: ${minutes} minutes ${seconds} seconds`);
+      }
+  
+      function simulateClick(x, y) {
+          let clickEvent = document.createEvent('MouseEvents');
+          clickEvent.initMouseEvent(
+              'click', true, true, window, 0,
+              0, 0, x, y, false, false,
+              false, false, 0, null
+          );
+          document.elementFromPoint(x, y).dispatchEvent(clickEvent);
+      }
+  
+      if (typeof intervalId !== 'undefined') {
+          clearInterval(intervalId);
+          clearInterval(timerIntervalId);
+          alert('Script Stopped');
+      } else {
+          startTime = new Date().getTime();
+          intervalId = setInterval(function(){
+              simulateClick(0, 0);
+          }, (Math.random() * 5 + 1) * 60000); // Random interval up to 5 minutes
+          
+          timerIntervalId = setInterval(showElapsedTime, 60000); // Show elapsed time every minute
+          
+          alert('Script Started');
+      }
+  })();
+">Not Here But There</a>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
