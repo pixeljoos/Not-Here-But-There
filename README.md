@@ -1,6 +1,6 @@
 # Not Here But There Bookmarklet
 
-This bookmarklet helps keep Microsoft Teams (web version) active by simulating mouse clicks at random intervals up to 5 minutes. It also shows the elapsed time since the script started every minute.
+This bookmarklet prevents your status from appearing idle on web-based applications like Microsoft Teams.
 
 ## Installation
 
@@ -13,7 +13,7 @@ This bookmarklet helps keep Microsoft Teams (web version) active by simulating m
 
 ## Usage
 
-1. Open Microsoft Teams in your web browser.
+1. Navigate to the web-based application (like Microsoft Teams) where you wish to remain active.
 2. Click on the "Not Here But There" bookmarklet you just added to your bookmarks bar. 
-3. An alert will notify you each minute showing the elapsed time since the script started.
-4. Click the bookmarklet again to stop the script.
+3. An alert will display, notifying you that "Not Here But There" is activated.
+4. To deactivate, simply click the bookmarklet again. An alert will inform you when "Not Here But There" is deactivated.
