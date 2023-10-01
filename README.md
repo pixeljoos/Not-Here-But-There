@@ -4,8 +4,7 @@ This bookmarklet helps keep Microsoft Teams (web version) active by simulating m
 
 ## Installation
 
-1. **Visit [this link](javascript:(function(){if(typeof window.myWakeLock === 'undefined' || window.myWakeLock.released){if('wakeLock' in navigator){async function requestWakeLock(){try{window.myWakeLock=await navigator.wakeLock.request('screen');alert('Not Here But There is activated. \nTo deactivate press the Not Here But There bookmarklet again. \nWARNING: Not Here But There will automatically deactivate if the tab is changed or a new window opens.');document.addEventListener('visibilitychange',async ()=>{if(document.visibilityState==='visible' && window.myWakeLock && !window.myWakeLock.released){await navigator.wakeLock.request('screen');}});window.myWakeLock.addEventListener('release', function(){alert('Not Here But There deactivated');});}catch(err){alert('Unable to activate Not Here But There: ' + err.name + ' - ' + err.message);}}requestWakeLock();}else{alert('Not Here But There is not supported in this browser.');}}else{window.myWakeLock.release();}})();
-) and drag the "Not Here But There" bookmarklet link to your bookmarks bar**.
+1. **Visit [this link](TEST) and drag the "Not Here But There" bookmarklet link to your bookmarks bar**.
 
 2. If you don't see your bookmarks bar, make sure it's visible:
    - **Chrome**: Go to the three vertical dots on the top right > Bookmarks > Show bookmarks bar.
