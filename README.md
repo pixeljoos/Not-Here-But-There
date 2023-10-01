@@ -1,4 +1,4 @@
-# Not Here But There Bookmarklet
+# Not Here But There
 
 This bookmarklet prevents your status from appearing idle on web-based applications like Microsoft Teams.
 
